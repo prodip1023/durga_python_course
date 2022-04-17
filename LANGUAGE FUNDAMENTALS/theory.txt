@@ -1,4 +1,32 @@
 Python is a general purpose high level programming Language.
 Developed by Guido Van Rossam in 1989.
 Officialy published : 1991
+Features from different Language :
+    1. Functional programming 
+    2. Object oriented programming
+    3. Scripting Language
+    4. Modular programming 
+Use :
+    1. Desktop Applications
+    2. Web Applications
+    3. Database Applications
+    4. Networking programming
+    5. Games Developing
+    6. Data Analysis Applications
+    7. Machine Learning
+    8. AI 
+    9. IOT
+
+Features of Python :
+    1. Simple to easy to Learn
+    2. Open Source and Freeware 
+    3. High Level programming Language
+    4. Platform Independent
+    5. Portability
+    6. Dynamically Typed
+    7. Both procedure and Object oriented 
+    8. Interpreted
+    9. Extensible
+    10. Embedded
+    11. Extensive Library 
 
