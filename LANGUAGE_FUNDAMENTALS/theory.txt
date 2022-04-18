@@ -1,0 +1,95 @@
+Python is a general purpose high level programming Language.
+Developed by Guido Van Rossam in 1989.
+Officialy published : 1991
+Features from different Language :
+    1. Functional programming 
+    2. Object oriented programming
+    3. Scripting Language
+    4. Modular programming 
+Use :
+    1. Desktop Applications
+    2. Web Applications
+    3. Database Applications
+    4. Networking programming
+    5. Games Developing
+    6. Data Analysis Applications
+    7. Machine Learning
+    8. AI 
+    9. IOT
+
+Features of Python :
+    1. Simple to easy to Learn
+    2. Open Source and Freeware 
+    3. High Level programming Language
+    4. Platform Independent
+    5. Portability
+    6. Dynamically Typed
+    7. Both procedure and Object oriented 
+    8. Interpreted
+    9. Extensible
+    10. Embedded
+    11. Extensive Library 
+
+IDENTIFIERS :
+  a = 10;
+  Rules :
+     1. Alphabet symbols (either upper or lower case)
+     2. Digits (0-9)
+     3. Underscore symbol(_)
+     4. Should not starts with digit 
+     5. Case sensitive
+     6. We can not use reserved words
+     7. There is no limit 
+     8. Dollar($) symbol is not allowed in Python.
+
+
+     NOTE :
+        1. _ -> indicate Private 
+        2. __ -> indicate Strongly Private Identifier 
+        3. _add_ -> magic method 
+
+Reserved Words :
+       Total= 33
+       True , False , None
+       and, or, not , is
+       if, elif,else
+       while,break,for, continue,return,in,yield
+       try,except,finally,raise,assert
+       import,from,as,class,def,pass,global,nonlocal,lambda,del,with
+
+DATA TYPES :
+  1. Int
+  2. float
+  3. complex
+  4. bool
+  5. str 
+  6. bytes
+  7. bytearray
+  8. range
+  9. list
+  10. tuple
+  11. set 
+  12. frozenset
+  13. dict
+  14. None 
+
+
+1. int data type 
+    a. decimal form (base 10)
+    b. binary form (base 2)
+    c. octal form (base 8)
+    d. hexadecimal form (base 16)
+
+2. float data type 
+    f= 1.56
+    f= 1.2e3
+
+3. complex data type 
+    a+bj
+    a = real Part (binary,decimal,hexadecimal,octal)
+    b = imaginary part (decimal)
+    4+5j
+    0.5+.1j
+
+
+    
