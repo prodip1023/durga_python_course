@@ -128,6 +128,33 @@ FUNDAMNTAL DATA TYPES ARE :
  4. bool
  5. Str
 
- 
-   
-    
+Type Casting:
+  we can convert one data type to other data type.
+  following various inbuilt funtions :
+     1.int()
+     2.float()
+     3.complex()
+     4.bool()
+     5.str()
+int() typecasting 
+print(int(1+4j)) error
+print(int("10.44")) error 
+print(int("0B1111")) error
+print(int("tiger")) error 
+
+float() typecasting
+  print(float(10+5j)) error
+  print(float("pro")) error 
+  print(float("0B1111")) error 
+
+complex() typecasting
+1. complex(x)
+print(complex("india"))  error
+2. complex(x,y)
+
+bool() typecasting 
+  zero = False
+  non zero  = True
+  bool(x) 
+str() typecasting
+str(x)
