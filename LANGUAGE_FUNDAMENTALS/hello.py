@@ -84,3 +84,40 @@ print(s[:4])
 print(s[:])
 print(s * 3 )
 print(len(s))
+
+#bytes data type 
+a = [10,20,30,40]
+b = bytes(a)
+print(type(b))
+print(b[0])
+print(b[-2])
+
+for i in b :
+    print(i)
+
+"""
+c = [20,40,60,555]
+d = bytes(c)
+d[2] = 30
+for i in d :
+    print(d)
+"""
+#bytearray data type
+a = [10,20,30,40]
+b = bytearray(a)
+print(type(b))
+print(b[0])
+print(b[-2])
+for i in b :
+    print(i)
+
+c = [20,10,50,40,60]
+d = bytearray(c)
+d[2] = 100
+for i in d :
+    print(i)
+
+
+
+
+

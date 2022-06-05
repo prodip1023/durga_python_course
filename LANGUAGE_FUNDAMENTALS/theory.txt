@@ -158,3 +158,107 @@ bool() typecasting
   bool(x) 
 str() typecasting
 str(x)
+
+FUNDAMNTAL DATA TYPES VS IMMUTABILITY 
+    1. All fundamental data types are immutable ; once we creates an object, we can not perform any changes in that object.
+       if we are trying to change then with those changes a new object will be crated.This non-chageable behaviour is called 
+       immutability.
+
+
+6. bytes data type
+    represent a group of byte numbers just like array 
+    only allowed values for byte data type 0-256
+    "bytes must be in range(0, 256)"
+    " doesn't support any assignment"
+7. bytearray data type 
+   same as bytes data type except element can be modified.
+   "bytearray must be in range(0, 256)"
+
+8.List data type
+     a. insertion order is preserved
+     b. heterogenous objcts are allowed
+     c. duplicates are allowed
+     d. growable in nature
+     e. values should be enclosed within square brakets. []
+     f. mutable
+    
+    
+9. Tuple data type 
+   same as list except immutable i.e we can't change values.
+   represent .()
+
+10.Range data type 
+   a sequence of numbers
+   not modifiable ; immutable
+   form - 1
+    range(x)
+   form -2 
+    range(x,y)
+   form -3
+   range(x,y,step)
+
+11. set data type
+     a. insertion order is not preserved
+     b. heterogenous objcts are allowed
+     c. duplicates are not allowed
+     d. growable in nature
+     e. values should be enclosed within {} brakets.
+     f. mutable
+     g. index not allowed
+
+12. frozenset data type
+    same as set except immutable
+    can not use add or remove funtions.
+
+13. dictionary data type
+    key-value pairs
+    key ->duplicate not allowed
+    value -> duplicate allowed
+    mutable
+    order not maintain
+    represent {}
+
+
+14. None data type
+    value is none 
+
+
+Constants 
+ Constants concept is not applicable for python 
+ but it is convention to use only uppercase Characters
+
+     MAX_VALUE = 100
+     we can change the value
+
+
+    NOTE :
+       bytes and bytearray data types represent binary information -> images,video and audio files etc
+
+       IMMUTABLE :
+          int
+          float
+          complex
+          bool
+          str
+          tuple
+          frozenset
+          bytes
+          range
+          
+        MUTABLE :
+          list
+          set
+          dict
+          bytearray
+
+Escape Characters :
+   \n ->New line
+   \t ->Horizontal tab
+   \r ->Carriage return
+   \b ->Back Space
+   \f ->Form feed
+   \v ->Vertical tab
+   \' ->Single Quote
+   \'' ->Double Quote
+   \\ ->Back Slash symbol
+
