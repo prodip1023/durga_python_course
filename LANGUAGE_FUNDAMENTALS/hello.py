@@ -48,3 +48,11 @@ print(oct(10))
 print(oct(0B1111))
 print(hex(100))
 print(hex(0B1111))
+
+# float data type 
+f = 1.23 
+print(type(f))
+f = 1.2e3
+f1= 1.2E5 
+print(f)
+print(f1)

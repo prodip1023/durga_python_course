@@ -92,4 +92,13 @@ DATA TYPES :
     0.5+.1j
 
 
+    represent int values in following forms :
+    1. Decimal form (base 10)(0-9)
+    2. Binary form (base 2) (0 & 1)(any base to -> bin)(0b or 0B)
+    3. Octal form (base 8)(0-7) (0o or 0O)(any base to -> oct)
+    4. Hexa decimal form (base 16)(0-9,a-f)(0x or 0X)(any base to -> hex)
+
+    represent float values in following forms :
+    1. floating point values(decimal values)
+    2. exponential form - big value in less memory 
     
