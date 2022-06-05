@@ -19,7 +19,7 @@ print(list2 * 2)
 
 #print(dir(list))
 
-#Tuple data types 
+#Tuple data type 
 t = (10,20,30,40)
 print(type(t))
 
