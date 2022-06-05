@@ -1,0 +1,175 @@
+Operators is a symbol that performs certain operations.
+python provides the following set of Operators :
+   1. Arithmatic Operators
+   2. Relational Operators OR Comparison Operators
+   3. Logical Operators
+   4. Bitwise Operators
+   5. Assignment Operators
+   6. Special Operators
+
+
+1. Arithmatic Operators :
+    1. Addition -> +
+    2. Substruction -> -
+    3. Multipilication -> *
+    4. Division Operator -> /
+    5. Modulo Operator -> %
+    6. Floor Division Operator -> //
+    7. Exponent Operator OR Power Operator -> **
+ 
+ NOTE :
+  / -> always performs floating point arithmatic.return float value.
+  // -> both int and float 
+  argument int type-> return int type
+  atleat one argument float type -> return float type
+  we can use +,* Operators for str . 
+  + -> both str type (concatenation)
+  * -> one argument int type 
+  x/0 or x%0 always raise ZeroDivisionError
+  10/0
+  10.0 % 0 
+
+2. Relational Operators :
+    1. >
+    2. <
+    3. >=
+    4. <=
+    we can also apply for str type 
+    
+  NOTE :
+    chaining of Relational Operators is possible .
+    all True -> result True
+    atleat one False -> result False 
+
+3. Equality Operators :
+   1. ==
+   2. !=
+  NOTE :
+   chaining of Equality Operators is possible .
+   atleat one False -> result False 
+   all True -> result True
+
+4. Logical Operators :
+    1. and
+    2. or
+    3. not 
+   and -> both arguments True then result True 
+   or -> atleat one argument True then result True
+   not -> 
+      True argument -> result False
+      False argument -> result True 
+
+  NOTE :
+  0 -> False
+  non-Zero -> True
+  empty string -> False 
+important cases :
+ a. x and y :
+     if x is evaluates to false return x otherwise return y
+ b. x or y :
+     if x is evaluates to True then result is  x otherwise result is y
+ c. not x :
+     if x is evaluates to False then result is  True otherwise result is False
+
+5. Bitwise Operators :
+    applicable only for int and boolean types
+    1. & -> if both bits are 1 then result is 1 otherwise result is 0
+    2. | -> if atleat one bit is 1 then result is 1 otherwise result is 0
+    3. ^ -> if bits are different then only result is 1 otherwise result is 0
+    4. ~ -> complement Operator  ->apply complement for total bits 
+    5. << -> Bitwise left shift
+    6. >> -> Bitwise right shift
+  NOTE :
+   most significant bits are sign bit .
+    0 -> +ve -> directly memory
+    1 -> -ve -> indirectly 2s complement form 
+    Bitwise left shift(<<)
+       After shifting the empty cells we have to fill with Zero
+    Bitwise right shift(>>)  
+       After shifting the empty cells we have to fill with sign bit(0 -> +ve 1 -> -ve)
+
+6. Assignment Operators :
+    we can use this Operator to assign value to the variable.
+    we can combine assignment operator with some other operator to form compound assignment operator 
+       1. +=
+       2. -=
+       3. *=
+       4. /=
+       5. //=
+       6. %=
+       7. **=
+       8. &=
+       9. |=
+       10.^=
+       11.>>=
+       12.<<=
+
+Tarnary Operator :
+   x = firstValue if condition else secondValue 
+   if condition is True then firstValue will be considered else secondValue will be considered .
+
+   NOTE :
+    nesting of ternary operator is possible
+
+7. Special Operators :
+      1. Identity Operators
+      2. Membership Operators
+    
+    Identity Operators :
+       1. is 
+       2. is not 
+       use address Comparison
+    NOTE :
+      r1 is r2 returns True if both r1 and r2 are pointing to the same object
+      r1 is not r2 True if both r1 and r2 are not pointing to the same object
+     
+     is and is not  -> address Comparison only 
+        ==          ->  content Comparison
+    Membership Operators :
+       1. in 
+       2. not in 
+       use Membership operators to check whether the give object presen in the given collection
+    (it may list,tuple,set,dict,string )
+        in -> Returns True if the given object present in the specified collection
+        not in -> Returns True if the given object not present in the specified collection
+
+Operator Precedence :
+     1. () -> Parenthesis
+     2. ** -> Exponential Operator
+     3. ~,- -> Bitwise complement , Unary Minus Operator
+     4. *,/,%,// -> Multipilication,Division,Modulo,Floor Division
+     5. +,- -> Addition,Substruction
+     6. <<,>> ->left and right shift
+     7. & -> Bitwise And 
+     8. ^ -> Bitwis X-OR 
+     9. | -> Bitwis OR 
+     10. >,>=,<=,==,!= ->Relational or Comparison Operator
+     11. =,+=,-=,*= .. -> Assignment Operator
+     12. is , is not -> Identity operator
+     13. in, not in -> Membership operator
+     14. not -> logical not 
+     15. and -> logical and 
+     16. or ->  logical or 
+     
+
+Mathematical Functions :
+   a module is a collection of function,variables and classes etc
+   import math 
+   import math as m  -> alias name 
+   from math import sqrt 
+   from math import pi,sqrt 
+
+   import Functions of Math module :
+       1. ceil(x)
+       2. floor(x)
+       3. pow(x,y)
+       4. factor(x)
+       5. trunc(x)
+       6. gcd(x,y)
+       7. sin(x)
+       8. cos(x)
+    important variables of math module :
+    pi -> 3.14
+    e -> 2.71
+    inf -> infinity 
+    nan -> not a number
