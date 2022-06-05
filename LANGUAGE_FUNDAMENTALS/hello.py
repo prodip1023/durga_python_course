@@ -56,3 +56,31 @@ f = 1.2e3
 f1= 1.2E5 
 print(f)
 print(f1)
+
+# bool data 
+b = True
+print(type(b))
+
+#str data type
+s1 = "prodip"
+print(s1)
+s2 = 'prodip'
+print(s2)
+s3 = ''' I am 
+       an Engineer '''
+print(s3)
+s4 = """ I am  
+      a Hacker """
+print(s4)
+
+s = "prodip sarkar "
+print(s[0])
+print(s[4])
+print(s[-1])
+#print(s[40])
+print(s[1:40])
+print(s[1:])
+print(s[:4])
+print(s[:])
+print(s * 3 )
+print(len(s))
