@@ -1,0 +1,7 @@
+Two types :
+   1. Raw input() (for python 2)
+   2. input() (for python 3)
+
+   x = input("enter the value )
+
+
