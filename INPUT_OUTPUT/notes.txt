@@ -2,6 +2,78 @@ Two types :
    1. Raw input() (for python 2)
    2. input() (for python 3)
 
-   x = input("enter the value )
+   x = input("enter the value ) # str 
+   x = int(input("enter the value )) # int 
 
 
+split() - > can take space as seperator by default .but we can pass anything as seperator .
+eval() - >  take a String and evaluate the result
+            can evaluate the input to list,tuple,set,etc based the provided input 
+
+
+Command Line Argument :
+   argv is not Array ,it is a list .List is available sys Module.
+   The Argument which are passing at the time of execution are called Command Line Arguments.
+   are available in argv ,which is present in Sys Module.
+   argv[0] -> name of program 
+   argv[1] -> First Command Line Argument 
+     
+     NOTE :
+       1. Usually space is seperator between Command Line Arguments .If our Command Line Argument itself contains space then we should enclose within double quotes(but not single quotes)
+       2. Within the python program Command Line Arguments are available in the String form.Based on our requirement,we can convert into corresponding type by using type casting methods.
+       3. If we are trying to access Command Line Arguments with out of range index then we will get error .
+       4. In python there is argparse Module to parse Command Line Arguments and display some help messages whenever end user enterns wrong input.
+   
+   
+   Output Statements:
+      1. We can use print() function to display output 
+      form -1
+         print()
+         without any argument. just it prints new line character
+      form -2
+         print(String) :
+         we can use escape character also
+         we can use repetetion operator (*) in the String
+         we can use + operator also 
+         both String type -> + operator -> Concatenation
+         one String , other Int ->Error (+ operator)
+         both number type -> arithmetic addition  (+ operator) 
+         
+      form -3 
+        We can use print() function with variable number of argumnets 
+        a,b,c = 10,20,30
+        print("the values :",a,b,c)
+        we can use specify seperator by using "sep" attribute
+        print(a,b,c,sep =';')
+         print(a,b,c,sep =':')
+          print(a,b,c,sep =',')
+
+
+      form -4
+       We can use print() function with end attribute
+       print("hello")
+       print("hello",end=',')
+
+      form -5 
+        We can use print(object) Statement
+        we can pass any object (like list,tuple,set,etc)
+        l = [10,20,30]
+        print(l)
+      
+      form -6
+        print(String,variable List)
+        s = "prodip"
+        a = 33
+        print("my name is ",s,"and my age is :",a)
+
+      form -7
+        print(formatted String)
+        %i -> int
+        %d -> int
+        %f -> float
+        %s -> string type
+        print("formatted string" %(variable List))
+
+      form - 8
+        print() with replacement operator {}
+        

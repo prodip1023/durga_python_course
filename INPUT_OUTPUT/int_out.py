@@ -11,4 +11,3 @@ print(type(x))'''
 first_number = int(input("enter the first  number :"))
 second_number = int(input("enter the  second  number :"))
 print("sum of these two number is :",first_number+second_number)
-
