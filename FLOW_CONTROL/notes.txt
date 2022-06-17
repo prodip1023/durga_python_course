@@ -1,0 +1,166 @@
+CONTROL FLOW ->
+   1. CONDITIONAL STATEMENTS
+          A. IF 
+          B. IF-ELIF
+          C. IF-ELIF-ELSE
+   2. TRANSFER STATEMENTS
+          A. BREAK
+          B. CONTINUE
+          C. PASS
+   3. ITERATIVE STATEMENTS
+          A. FOR 
+          B. WHILE
+
+ 1. CONDITIONAL STATEMENTS
+
+A. if :
+ 
+   if condition : statement 
+           OR
+   if condition :
+      statement 1
+      statement 2
+      statement 3
+if statement is true then statements will be executed.
+
+B. if-else :
+  if condition :
+       action-1
+  else :
+     action-2
+
+if contion is true the action-1 will be executed otherwise action-2 will be executed.
+
+C. if-elif-else :
+    
+     if condition 1 :
+        action -1
+     elif condition 2 :
+        action-2
+     elif condition 3 :
+        action-3
+       .......
+       .......
+       ......
+     else :
+        Default action 
+
+based condition the corresponding action will be executed.
+
+
+NOTE :
+ 1. else part is always optional . Hence the following are various possible syntaxes .
+    1. if
+    2. if -else 
+    3. if-elif-else
+    4. if-elif
+2. There is no switch statement in Python .
+
+
+2. ITERATIVE STATEMENTS
+  A. for loop
+  B. while loop
+
+    if we want to execute a group of statements multiple times then we should go for itertative statements.
+A. for loop :
+     if we want to execute some action for every element present in some sequence (it may be string or collection) then 
+     we should go for for loop .
+
+    for x in sequence :
+       body 
+
+   where sequence can be string or any collection .
+   body will be executed for every element present present in the sequence .
+
+B. while loop :
+     if we to execute a group of statements itertatively until some condition false , then we should go for while loop.
+
+     while condition :
+       body 
+Nested Loops :
+  Sometimes we can take a loop inside another loop ,which is called Nested Loops
+
+  C. TRANSFER STATEMENTS :
+       A. break 
+       B. continue 
+       C. pass 
+
+A. break :
+   we can use break statement inside loops to break loop execution based on some condition .
+B. continue :
+    we can use continue statement to skip current iteration and continue next iteration.
+
+Loops with Else Block :
+   Inside loop execution , if break statement not executed,then only else part will be executed.
+   else means loops without break.
+
+
+Difference between For Loop and While Loop
+
+   we can use loops to repeat code execution
+   repeat code for every item in sequence -> for loop
+   repeat code as long as condition is True -> while loop
+
+
+C. pass :
+   pass is a keyword in python .
+   in our programming synteactically if block is required which won't do anything then we can define empty block with pass keyword.
+
+
+
+   Pass -
+        - It is null statement
+        - It is an empty statement
+        - It won't do anything 
+        
+      if True :
+       pass
+      
+
+      def() m1 :
+         pass
+
+Use Case of PASS :
+   Sometimes in the statement the parent class we have to declare a funtion with empty body and child class resposible to provide proper 
+   implementation. Such type of empty body can define by using pass keyword .
+
+
+
+  DEL STATEMENT :
+      del is a keyword in python
+      After using a variable, it is highly recommended to delete that variable if it is no longer required , so that 
+      the corresponding object is eligible for Garbage Collection.
+      We can delete variable by using del keyword .
+       x = 10 
+       print(x)
+       del x 
+       After deleting a variable we can not access that variable otherwise we will get NameError.
+
+       x = 10
+       del x 
+       print(x)
+
+       NameError: name 'x' is not defined.
+
+       NOTE :
+        We can delete variables which are pointing to immutable objects.But we can not delete the elements 
+        present inside immutable object.
+         
+           s = "prodip"
+           print(s)
+           del s ->valid
+           del s[0] ->TypeError ('str' object doesn't support item deletion )
+
+   Difference between del and None :
+       In case del ,the variable will be removed and we can not access that variable (unbind operation)
+
+             s = "prodip"
+             del s 
+             print(s) ->NameError: name 's' is not defined 
+
+       In case of None assignment the variable won't be removed but the corresponding objects eligible for 
+       Garbage Collection (re bind operation) .Hence after assigning with None value,we can access that variable.
+              s = "prodip"
+              s = None
+              print(s) ->None 
+     
