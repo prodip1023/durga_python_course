@@ -1,0 +1,231 @@
+String :
+  Any sequence of characters within either single quotes or double quotes is considered as a string.
+
+     syntax :
+       s = "prodip"
+              or 
+       s = 'prodip'
+
+  s = 'This is ' single quote symbol'      -> Invalid
+
+
+  How to Access characters of String?
+     1. By using index
+     2. by using slice operator
+
+   1. Accessing Charcters by using index :
+         ONLY Python supports both +ve and -ve index ------> ********Importaant*********
+         +ve -> Left to Right (forward Direction) 
+         -ve -> Right to Left (Backward Direction )
+
+    2. Accessing Charcters by using Slice Operator :
+           syntax :
+             [ begining index : end index : step ]
+
+             Begining index -> From where we have to consider slice (substring )
+             End index -> we have to terminate the slice (substring) at endindex-1 
+             Step -> Incremented value
+        NOTE :
+           1. if we are not specifying begining index then it will consider from begining of the string.
+           2. if we are not specifying end index then it will consider up to end of the string.
+           3. The default value for step 1 
+        
+        Behavior of Slice Operator :
+           1. s[begining index : end index : step]
+           2. step value can be +ve or -ve 
+           3. if +ve then it should be forward direction (Left to Right) and we have to consider Begining index to end-1
+           4. if -ve then it should be beckward direction (Right to Left) and we have to consider Begining index to end+1
+
+           NOTE :
+              In forward direction if end value is 0 then result is always empty
+              In backward direction if end value is -1 then result is always empty
+               In Forward Direction :
+                  default value for begining : 0
+                  default value for end : length of String 
+                  default value for step : +1 
+                In Backward Direction :
+                   default value for begining : -1
+                   default value for end : -(length of String+1)
+                Either forward or backward direction ,we can teke both +ve and -ve values for begining and end index.
+
+
+               ******* First check - Step value 
+                       +ve ->if +ve then it should be forward direction (Left to Right) and we have to consider Begining index to end-1
+                       -ve ->if -ve then it should be beckward direction (Right to Left) and we have to consider Begining index to end+1
+
+                ******* slice operator never raises IndexError
+
+   Mathematical Operators for String :
+         1. + ->concatenation -> both are string
+         2. * -> repetition  -> atleast one int value.
+
+
+   len() in built in Function :
+       We can use len() Function to find the number of charcters in present string .
+
+   Checking Membership :
+      1. in 
+      2. not in 
+      We can check whether the character or string in the Member of another string or not by using in and not in operators.
+   
+   Comparison of String :
+       1. Comparison Operator (<=,>=,<,>)
+       2. Equality Operator (==,!=)
+   
+   Removing Spaces from the string :
+      follwing 3 methods :
+        1. rstrip() -> to remove Spaces at Right hand side
+        2. lstrip() -> to remove Spaces at Left hand side
+        3. strip()  -> to remove Spaces both sides 
+   
+   Finding Substring :
+      We can use 4 methods :
+          1. Forward Direction :
+                 a. find()
+                 b. index()
+          2. Backward Direction :
+                 a. rfind()
+                 b. rindex()
+
+
+      find() :
+       s.find(substring) -> Returns index of First occurance of given substring.If it is not available then we will get-1.
+       NOTE :
+          By default find() method can search total string 
+      s.find(substring,begin,end) -> It will always search begin index to end-1 index .
+
+      index() :
+       index() method is exatly same as find() method except that if specified substring is not available then we will get ValueError.
+       rindex()
+
+
+   Counting Substring in the given string :
+      We can find the number of occurances of substring present in the given string by using count() method .
+         1. s.count(substring) -> It will search through out the string 
+         2. s.count(substring,begin,end) -> It will search from begin to end-1 index 
+
+   Replacing a string with another string :
+      s.replace(oldstring,newstring)
+   
+
+   *********  String Objects are Immutable then how we can change the content by using replace() Method *********
+           1. If we re trying to change the content by using any method ,then with those changes a new object will be 
+           created and changes won't be happend in existing object.
+           2. hence with replace() method also a new object got created but existing object won't be changed .
+
+
+
+   Splitting of Strings :
+        We can split the given string according to specified seperator by using split() method
+        l = s.split(seperator)
+        The default seperator is space .The return type of split() method is List .
+   
+
+   Joining of Strings :
+       We can Join a group of Strings(List OR Tuple) write the given seperator.
+       s = seperator.join(group of string)
+
+   Changing Case of a String :
+       We can change case of a string by using the follwing 5 methods :
+           1. upper() -> to convert all characters to upper case.
+           2. lower() -> to convert all characters to lower case.
+           3. swapcase() -> Converts all lower case characters to upper case and all upper case characters to lower case.
+           4. title()  ->  First character is upper remaining characters should be lower case .
+           5. capitalize() -> First character is upper remaining characters should be lower case .
+
+   Checking Starting and Ending part of the string :
+           1. s.startwith(substring)
+           2. s.endswith(substring)
+   
+
+   To check Type of characters present in a String :
+      follwing methods :
+         1. isalnum() -> Retuns True if all characters are alphanumeric(a-z,A-Z,0-9)
+         2. isalpha() -> Retuns True if all characters are alphabet symbols(a-z,A-Z)
+         3. isdigit() -> Retuns True if all are digit only
+         4. islower() -> Retuns True if all characters are lower case alphabet symbols
+         5. isupper() -> Retuns True if all characters are upper case alphabet symbols
+         6. istitle() -> Retuns True if string is in title case
+         7. isspace() -> Retuns True if string cointains only spaces
+
+
+   Formatting the String :
+       We can format the strings with variable values by using replacement operator {} and format() method .
+       case - 1 :
+          Basic Formatting for default ,positional and keyword argument .
+          print("{} 's salary is {} and his age is {}".format(name,salary,age))
+          print("{0} 's salary is {1} and his age is {2}".format(name,salary,age) )
+          print("{x} 's salary is {y} and his age is {z}".format(z=age,x=name,y=salary))
+      case -2 :
+          Formatting Numbers :
+            d -> decimal integer
+            f -> fixed number(float) .The default is precision 6 
+            b -> Binary format
+            o -> Octal format
+            x -> Hexa decimal format ( lower Case)
+            X -> Hexa decimal Formatting (upper case )
+
+
+         NOTE :
+            {:08.3f} -> total positions should be minimum 8 .
+            After decimal point exatly 3 digitS are allowed. If it is less than 0s will be placed in the last positions.
+            If total number is < 8 positions then 0 will be placed in MSBs.
+            If total number is > 8 positions then all integer digits will be considered.
+            The extra digits we can take only 0.
+               For numbers default alignment is Right alignment (>)
+            
+
+            {:5d} -> It takes an integer argument and assigns a minimum width of 5 .
+            {:8.3f} -> It takes float argument and assigns a minimum width of 8 including "." and after decimal point exatly 3 digits are allowed with round operation if required.
+            {:05d} -> The blank places can be filled with 0 . In this place only 0 allowed.
+      
+      case -3 :
+         Number Formatting for signed numbers :
+             While displaying positive numbers,if we want to include + then we have to wirte {:+d} and {:+f}
+             Using pluss for  -ve numbers there is no use and -ve numbers -sign will come automatically.
+      
+
+      case -4 :
+         Number Formatting with alignment 
+           <,>,^ and =  -> are used for alignment
+           < -> Left alignment to the remaining space
+           ^ -> Center alignment to the remaining space
+           > -> Right alignment to the remaining space
+           = -> Forces the signed(+)(-) to the left most position 
+      NOTE : 
+         default alignment for numbers is Right alignment .
+      
+      case -5 :
+         String Formatting with format() :
+           s.format(string)
+      NOTE :
+        for numbers default alignment is right where as for string default alignment is left 
+
+      case -6 :
+         Truncating String with format() method 
+      
+      case -7 :
+        Formatting dictionary members using format() 
+
+      
+      case -8 :
+         Formatting class members using format()
+
+      NOTE :
+        Here Person object is passed as keyword argument.We can access by using its reference variable in the template string.
+      
+
+      case -9 :
+        Dynamic Formatting using format()
+
+      case - 10 :
+        Dynamic float format template :
+      
+      case -11 :
+       Formatting Date values 
+
+      case -12 :
+       Formatting complex numbers 
+
+
+

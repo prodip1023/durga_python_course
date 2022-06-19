@@ -1,0 +1,7 @@
+print('Prodip1023'.isalnum())
+print('Prodip1023'.isalpha())
+print('Prodip'.isalpha())
+print('1033'.isdigit())
+print('prodip'.islower())
+print('p r o d i p'.isspace())
+print('prodip'.istitle())
