@@ -1,0 +1,236 @@
+If we want to repreesent a group of individual objects as a single entity where insertion order preserved and duplicates
+are allowed , then we should go for LIST.
+
+Behaviour :
+    1. duplicates objects are allowed
+    2. insertion order preserved
+    3. heterogenous objects are allowed
+    4. List is dynamic because based on our requirement we can increase the size and decrease the size.
+    5. In LIST the elements will be placed within square brackets [,] and with comma seperator.
+    6. We can differentiate duplicate elements by using index and we can preserved insertion order by using index.Hence index will play very important role .
+    7. Python supports both +ve and -ve indexes.
+           +ve index -> Forward direction (Left to Right )
+           -ve index -> Backward direction (Right to Left)
+
+                        -6 -5 -4 -3  -2  -1                       
+               
+                        10, A, B, 20, 30, 10  
+
+                        0   1  2  3   4    5 
+    
+    8. List objects are mutable . We can change the content .
+
+
+    Creation of List objects :
+       1. We can create empty list object 
+       2. If we know elements already then we can create list as follows list 
+       3. With Dynamic Input 
+       4. With split() Function
+       NOTE :
+        Sometimes we can take list inside another list ,such type of lists are called nested lists.
+                       [10,20,30[20,'A',50]]
+    
+
+    Accessing Elemnets of List :
+        1. By using index
+        2. By using Slice Operator 
+
+           1. By using index :
+                 
+                    a. List follows zero based index. index of first element is zero .
+                    b. List supports both +ve and -ve indexes .
+                    c. +ve -> Left to Right
+                       -ve -> Right to Left 
+                    d.  List index out of ranges -> IndexError  
+            
+            2. By using Slice Operator :
+                 list2 = [start:stop:step]
+                 start -> It indicates the index where slice has to start . Default value 0
+                 stop ->  It indicates the index where slice has to end . Default value is max allowed index of List . Length of the List.
+                 step ->  Increment value . Default value is 1 .
+
+
+    List vs Mutability :
+       
+          Once we can creates a List Object , we can  modify its content.Hence List objects are mutable.
+
+
+    Traversing the eliments of List :
+       
+          The sequential access of each element in the list called Traversal .
+
+          1. By using while loop 
+          2. By using for loop 
+
+
+
+    Important Functions of List :
+      1. To get information about List :
+            a . len(list) -> Returns the number of elements present in the list . 
+            b. list.count(occurrences) -> It returns the number of occurrences of specified item in the list .
+            c. list.index(first occurrences) -> Returns the index of first occurrence of the specified item . 
+                  ValueError -> not in the list 
+                     print(90 in l ) -> False 
+
+
+
+    Manipulating Elements of List : 
+             a. append() Function -> We can use this Function for add item at end of the list .
+             b. insert() Function -> To insert item at specified index position .
+             c. extend() Function -> To add all items of one list to another list .
+                  l1.extend(l2)
+             d. remove()
+             e. pop()
+
+
+
+             
+
+    NOTE :
+     insert() Function :
+         
+           If the specified index is greater then max index then element will be inserted at last position.
+           If the specified index is smaller then min index then element will be inserted at first position   
+
+
+
+      remove() Function :
+            
+            We can use this function to remove specified item from the list .If the item present multiple times then only 
+            first occurrence will be removed. 
+
+            If the specified item not present in the list then we will get ValueError. 
+
+
+            NOTE :
+
+               Hence before using remove() method first we have to check specified element present in the list or not by using in Operator.
+
+
+      pop() Function :
+
+               It removes and returns the last element of the list.
+               This is only function which manipulates list and returns some element .
+               If the list is empty then pop() function raises IndexError.
+
+
+               NOTE :
+                  pop()  is only function which manipulates the list and returns some value.
+                  In general we can use append() and pop() functions to implement stack datastructure by using list,
+                  which follows LIFO ( Last in Fast Out ) order.
+                  In general we can use pop() function to remove last element of the list .But we can use to remove 
+                  elements based on index.
+
+                         n.pop(index) -> To remove and return element present at specified index.
+                         n.pop()      -> To remove and return last element of the list.
+
+
+                  List Objects are dynamic . i.e based on your requirement we can increases and decrease the size.
+                  append(),insert(),extend() -> for increasing the size/growable nature
+                  remove(),pop() -> for decreasing the size/ shrinking  nature 
+
+
+      Ordering Elements of List :
+            a. reverse()
+            b. sort()
+            
+
+            reverse() Function :
+                 We can use to reverse() order of elements of list .
+            
+            sort() Function :
+                  In list by default insertion order is preserved.If want to sort the elements of list according to Default
+                  natural sorting order then we should go for sort() method.
+
+
+                        For numbers -> Default Natural sorting order is Ascending Order
+                        For strings -> Default Natural sorting order is Alphabetical Order 
+               
+               NOTE :
+                  To use sort() function,compulsory list should cointain only homogenous element.
+                  otherwise we will get TypeError.
+                            
+                            n = [20,30,"A","B"]
+                            n.sort()
+                            print(n)
+                                TypeError : 'str' and 'int' 
+
+
+                  In Python 2 if the list cointains both numbers and strings then sort() function first sort numbers 
+                  follwed by strings.
+                                
+                          n = [20,30,"A","B"]
+                          n.sort()
+                          print(n) # [10,20,"A","B"] 
+
+
+                  But in Python 3 it is invalid .
+      
+
+      Aliasing and Cloning of the List :
+           
+              The process of giving another reference variable to the existing list is called Aliasing.
+              The problem in this approach is by using one reference variable if we are changing content,
+              then those changes will be reflected to the other reference variable.
+              To overcome this problem we should go for Cloning.
+              The process of creating exactly duplicate independent object is  called Cloning.
+
+
+                  We can implement cloning by using slice Operator and or by using copy() function.
+
+
+
+            NOTE : 
+               Aliasing -> = Operator
+               cloning ->   copy()  
+
+
+
+      Using Mathematical Operators for List objects :
+              Using + and * 
+               
+               1. Concatenation -> + Operator
+                      To use + Operator compulsory both arguments should be list objects,otherwise we will get TypeError.
+                    
+               2. Repetition   ->  * Operator  
+
+
+      Comparing List objects :
+            We can use comparison Operators for List objects.
+
+            NOTE :
+              Whenever we are using comparison Operators ( == , != ) for list objects then the following should be considered :
+                     a. The Number of elements
+                     b. The order of elements 
+                     c. The content of elements (case sensitive)
+              
+               When ever we are using relational Operators(<,>,<=,>=) between List objects, only 1st element comparison will be 
+               performed. 
+
+
+      Membership Operators :
+          We can check whether element is a member of the list or not in the list by using maembership Operators.
+              1. in Operator 
+              2. not in  Operator
+
+      clear() Function :
+          We can use clear() function to remove all elements of list.
+
+
+      Nested Lists :
+
+          Sometimes we can take one list inside another list .Such type of lists are called Nested lists.
+            a = [[100,230,500],[200,340,50],[300,400,600],10,30,50,60]
+
+            NOTE:
+               We can access nested list elements by using index just like accessing multi dimensional array elements.
+
+
+
+      List Comprehensions :
+          
+           It is very easy and compact way of creating list objects from any iterable objects(like List,Tuple,Dictionary,Range etc)
+           based on some condition.
+                 
+                  
+                       list = [expression for item in list if condition]
