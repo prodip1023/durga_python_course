@@ -1,0 +1,107 @@
+If we want to represent a group of unique vaues as a single entity then we should go for Set.
+Duplicates are not allowed.
+Insertion order is not preserved.But we can sort the elements.
+Indexing and Slicing not allowed.
+Heterogeneous elements are allowed.
+Set objects are mutable.i.e once we creates set object we can perform any changes in that object based on our requirement.
+We can represent set elements within curly braces and comma seperator ->{}
+We can apply mathematical operations like union,intersection,difference etc on set objects.
+
+
+
+We can create set objects by using set() Function
+    s = set(any sequence)
+
+
+    NOTE :
+      
+       While creating empty set we have to take special care.
+       compulsory we should use set() Function 
+
+Important Function of Set :
+        
+         1. add()
+         2. update()
+         3. copy()
+         4. pop()
+         5. remove()
+         6. discard()
+         7. clear()
+
+         update(x,y,z) :
+         To add multiple items to the set 
+         Arguments are not individual elements and these are iterable objects like List,range etc .
+         All elements present in the given iterable objects will  be added to the set. 
+
+
+      ********************  add()  vs update() **************************
+           1. add() to add individual item to the set 
+              update() add multiple items to the set 
+
+           2. add() only one argument 
+              update() can take any number of arguments but all arguments should be iterable objects. 
+
+                     s.add(10) -> 
+                     s.add(10,20,30) -> TypeError (exactly one argument)
+                     s.update(10) ->    TypeError (int not iterable)
+                     s.update(range(1,10,2),range(0,12,2)) -> 
+
+        copy() :
+          returns copy of set 
+          it is clone object 
+
+
+        pop() :
+         It removes and returns some random element from the set 
+        
+
+        remove() :
+          It removes specified element from the set .
+          If the specified element not present in the set then we will get KeyError.
+
+        discard() :
+           It removes specified element from the set .
+           If the specified element not present in the set then we won't get any error .
+        
+        clear() :
+          To remove all elements from the set .
+    
+
+ 
+
+Mathematical operations on the set :
+      1. union()
+      2. intersection()
+      3. difference()
+      4. symmetric_difference()
+
+      union() :
+         x.union(y) -> We can use this Function to return all elements present in both sets 
+         x.union(y) OR x|y 
+
+      intersection() :
+         x.intersection(y) OR x&y 
+         Returns common elements present in both x and y.
+
+      difference() :
+         x.difference(y) OR x-y 
+         Returns the elements present in but not in y. 
+
+      symmetric_difference() :
+         x.symmetric_difference(y) OR x^y 
+         Returns elements present in either x OR y but not in both.
+
+
+Membership Operators in Set :
+   1. in 
+   2. not in 
+
+
+Set Comprehension :
+   
+   Set Comprehension is possible.
+
+
+
+
+********************** Set objects won't support Indexing and Slicing ***************************** 
