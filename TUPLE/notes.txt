@@ -34,6 +34,7 @@ Important Functions of Tuple :
     4. sorted()
     5. min() and max()
     6. cmp() -> Only  Python 2 available
+    7. reversed()
 
 
         index() :
@@ -49,6 +50,26 @@ Important Functions of Tuple :
 
         NOTE :
            cmp() Functions is available only Python 2 but not in Python 3.
+
+
+
+ Equality operators for Tuple  :
+      1. ==
+      2. !=
+         NOTE :
+          == 
+            1. Number of Elements.
+            2. order of Elements.
+            3. content of Elements.
+
+  Relational operators for Tuple  :
+          1. <
+          2. >
+          3. <=
+          4. >=
+  Membership operators for Tuple :
+         1. in 
+         2. not in 
 
 
 Tuple Packing and Unpacking :
@@ -85,3 +106,19 @@ Tuple Comprehension :
 
     List objects can not used as keys for Dictionaries because keys should be Hashable and immutable .
     Tuple object can be used as keys for Dictionaries because keys should be Hashable and immutable .
+
+
+
+
+
+Can not change any content thats why not used this Functions in Tuple :
+     
+
+       add :                                   remove :
+                                                
+                                                pop()
+                                                remove()
+                                                clear()
+           append()
+           insert()
+           extend()

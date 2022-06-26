@@ -1,5 +1,4 @@
 # len() Function 
-from itertools import count
 
 
 t = (10,20,40,50)
@@ -20,7 +19,8 @@ print(t.index(20))
 # sorted() Function 
 t = (10,20,90,20,40,20,50) 
 t1 = sorted(t)
-print(t1)
+t2 = tuple(t1)
+print(t2)
 
 
 t = (10,20,90,80,40,5,50) 
@@ -45,3 +45,9 @@ print(cmp(t1,t3))
 print(cmp(t2,t3))
 '''
 
+# Reversed() Function  
+
+t = (10,20,30,40)
+t1= reversed(t)
+t2 = tuple(t1)
+print(t2)
