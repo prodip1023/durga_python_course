@@ -1,0 +1,87 @@
+1.  Tuple is exactly same sa List except it is a immutable.i.e once we creates Tuple object,we can not perform any changes in that object.
+2.  Hence Tuple is Read only version of List.
+3.  If our data is fixed and never changes then we should go for Tuple.
+4.  Insertion Order is perserved.
+5.  Duplicates are allowed.
+6.  Heterogeneous object are allowed.
+7.  We can perserve insertion order and we can differentiate duplicate objects by using index.Hence index will play important role in Tuple also.
+8.  Tuple support both +ve and -ve index.
+            +ve -> forward direction ( Left to Right )
+            -ve -> backward direction ( Right to Left )
+9.  We can represent Tuple element within paraenthesis and with comma seperator .
+10  Paraenthesis are optional but recommendated to use .
+
+
+NOTE : 
+  We have to take special care about single valued tuple.compulsary the value should ends with comma,otherwise it is not treated as tuple.
+
+
+
+Accessing Elements of Tuple :
+      1. By using index
+      2. By using slice operator 
+
+
+Mathematical operators for Tuple : 
+    1. + -> concatenation 
+    2. * -> Repetition  
+
+
+Important Functions of Tuple : 
+    1. len()
+    2. count()
+    3. index()
+    4. sorted()
+    5. min() and max()
+    6. cmp() -> Only  Python 2 available
+
+
+        index() :
+          Returns index of first occurrance of the given element.
+          If the specified element is not available then we will get ValueError.
+
+        cmp() :
+          It compares the elements of both tuples 
+          If both tuples are equal then returns 0. ***********************************
+          If the first tuple is less than second tuple then it returns -1.   *********
+          If the first tuple is greater than second tuple then it returns +1. ********
+        
+
+        NOTE :
+           cmp() Functions is available only Python 2 but not in Python 3.
+
+
+Tuple Packing and Unpacking :
+      We can create a tuple by Packing a group of variables .
+      a = 10
+      b = 20
+      c = 30
+      d = 40
+      t = a,b,c,d 
+      print(t)
+
+      NOTE :
+         Here a,b,c,d are packed into a Tuple t . This is nothing but Tuple Packing.
+         Tuple Unpacking is the reverse process of Tuple Packing.
+         We can unpack a Tuple and resign its values to different variables.
+
+         At the time of tuple Unpacking the number of variables and number of values should be same ,otherwise we will get ValueError.
+
+         t = (10,20,30,40) 
+         a,b,c = t -> ValueError .
+
+
+Tuple Comprehension :
+   
+    Tuple Comprehension is not support by Python. ************************
+    t = (  x**2 for x in range(1,11))
+    Here we are not getting tuple object and we are getting generator object.
+
+
+
+
+    ********************* LIST vs TUPLE *************************************
+
+
+    List objects can not used as keys for Dictionaries because keys should be Hashable and immutable .
+    Tuple object can be used as keys for Dictionaries because keys should be Hashable and immutable .
