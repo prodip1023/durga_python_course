@@ -1,0 +1,311 @@
+If a group of statements is repeatedly required then it is not recommended to write these statements eveytime seperately.
+We have to define statements as a single unit and we can call that unit any number of times based on our requirement without rewriting.
+This unit is nothing but function.
+
+The main advantage of function is code reusability.
+
+NOTE :
+  In other languages functions are konwn as methods,procedures,subroutine etc.
+
+  Python supports 2 types of functions -
+           1. Built in functions
+           2. User defined functions
+
+
+Built in functions :
+    The functions which are coming along with Python Software automatically, are called Built in functions or Pre defined function.
+    e.g - 
+        id()
+        print()
+        type()
+        eval()
+        input()
+
+
+User defined functions :
+    The functions which are developed by programmer explicitly according to business requirements,are called User defined functions.
+
+          def function_name(parameters) :
+              """ doc strings"""
+                ----
+                -----
+                return value
+
+     NOTE :
+        while creating functions we can use 2 keywords 
+              1. def(mandatory)
+              2. return (optional)
+
+        e.g. Write a function to print Hello
+
+
+Paremeters :
+    Paremeters are inputs to the function.If a function contains parameters,then at the time of calling,compulsory we should provide
+    values otherwise,otherwise we will get error. 
+
+
+Return Statement :
+    Function can take input values as parameters and executes business logic, and returns output to the caller with return statement.
+    If we are not writing return statement then default return value is None.
+           def f1() :
+              print("Hello")
+            f1()
+            print(f1())
+
+
+Returning Multiple values from a Function :
+     In other language like C++ and Java, function can return atmost one value.But in Python,a function can return any number of values.
+
+
+Types of Arguments :
+    
+      def f1(a,b) : 
+      -----------
+     -------------
+      -----------
+      f1(10,20)
+
+      a,b  -> Formal arguments.
+      10,20 -> Actual arguments.
+
+
+4 types of Arguments :
+     1. Positional Arguments 
+     2. Keyword Arguments 
+     3. Default Arguments
+     4. Variable Length Arguments 
+
+
+Positional Arguments  :
+   
+      These are the arguments passed to function in correct Positional order.
+                
+                 def sub(a,b):
+                 print(a-b)
+
+
+                 sub(100,200)
+                 sub(200,100)
+        NOTE :       
+          The number of arguments and position of arguments must be matched . If we change the order then result may be changed.
+          If we change the number of arguments then we will get error.
+
+
+Keyword Arguments :
+       
+       We can pass argument values by keyword. i.e by parameter name .
+       Here the order of argument is not important but number of arguments must be matched.
+
+
+       NOTE :
+          We can use both Positional and keyword arguments simultoneously. But first we have to take Positional arguments and then keyword arguments,
+          otherwise we will get syntaxerror.
+
+
+       
+Default Arguments :
+      
+       Sometimes we can provide default values for our Positional arguments.
+
+       NOTE:
+        After default arguments we should not take non default arguments.
+
+
+Variable Length Arguments :
+     
+      Sometimes we can pass Variable number of arguments to our function,such type of arguments are called Variable Length Arguments.
+
+      We can declare a Variable Length argument with * symbol as follows 
+                       def f1(*n) :
+      We can call this function by passing any number of arguments including zero number.
+      Internally all these values represented in the form of tuple.
+
+
+      NOTE :
+        After Variable Length argument,if we are taking any other arguments then we should provide values as keyword arguments.
+                     f1("A","B",n1 = 10) ->Valid
+                     f1("A","B",10) -> InValid
+
+
+        We can declare key word Variable Length arguments also.
+        for this we have to use **
+        def f1(**n):
+        We can call this function by passing any number of keyword argumnets.Internally these keyword arguments will be stored inside a dictionary.
+
+
+
+CASE STUDY :
+  
+
+     def f(arg1,arg2,arg3=4,arg4=8) :
+          print(arg1,arg2,arg3,arg4)
+    
+      f(3,2)                -> 3,2,4,8
+      f(10,20,30,40)        -> 10,20,30,40
+      f(25,50,arg4=100)     -> 25,50,4,100
+      f(arg4=2,arg1=3,arg2=4) -> 3,4,4,2
+      f()                    -> InValid
+      f(arg3=10,arg4=20,30,40) -> InValid(Positional argument follows keyword argument)
+      f(4,5,arg2=6)            -> InValid( f() got multiple values for argument 'arg2')
+      f(4,5,arg3=5,arg5=6)     -> InValid( f() got an unexpceted keyword argument 'arg5')
+
+      NOTE :
+         Positional argument follows keyword argument
+         [After keyword argument we should not take Positional arguments]
+
+
+******************** FUNCTION vs MODULE vs LIBRARY ******************************************
+FUNCTION : A group of lines with some name is called a FUNCTION.
+MODULE :  A group of functions saved to a file ,is called MODULE.
+LIBRARY : A group of modules is nothing but Library.
+
+
+
+Types of Variables :
+   
+   Python supports 2 types of Variables 
+           
+             1. Global Variables 
+             2. Local Variables
+  
+  Global Variables :
+      
+       These variables which are declared outside of the function are called global variables.
+       These variables can be accessed in all functions of that module.
+
+  Local Variables :
+       
+       The variables which are declared inside a function are called local variables.
+       Local variables are available only for the function in which we declared it. i.e from outside of function we can not access.
+
+
+  Global Keyword :
+      
+       We can use global keyword for the following 2 purpose :
+           1. To declare global variable inside function.
+           2. To make global variable available to the function so that we can perform required modifications.
+
+
+           NOTE :
+              If global variable and local variable having the same name then we can access global variable inside a function as follows.
+
+
+
+  Recusive Functions : 
+       
+       A function that calls itself is known as Recusive function.
+       e.g - factorial 
+       factorial(n) = n * factorial(n-1)
+       Advantages :
+          1. We can reduce Length of code and improves raadability
+          2. We can solve complex problems very easily.
+
+
+  Anonymous Function :
+      
+       Sometimes we can declare a function without any name,such type of nameless function are called anonymous functions or lambda functions.
+       The main purpose of anonymous function is just for instant use(for one time usage)
+
+
+       Normal Function :
+          
+           We can define by using def keyword 
+               def squarelt(n) :
+                  return n * n 
+      
+      Lambda Function :
+           
+           We can define using lambda keyword 
+             lambda n : n * n
+
+             syntax of lambda function :
+                  lambda argument_list : expression
+
+              NOTE :
+                 By using Lambda Functions we can write very concise code so that readability of the program will be improved.
+                 Lambda function internally returns expression valueand we are not required to write return statement explicitly.
+                 Sometimes we can pass function as argument to another function.In such cases lambda functions are best choice.
+
+
+
+           We can use lambda functions very commonly with filter(),map(),reduce() functions because these functions expect function as argument.
+      
+
+      filter() Function :
+         
+         We can use filter() function to filter values form the given sequence based on some condition.
+
+         fliter(function,sequence) 
+         Where function Argument is responsible to perform conditional check sequence can be List OR Tuple OR String.
+      
+
+      map() Function :
+         
+
+         For every element present in the given sequence,apply functionality and generate new element with the required modification.
+         For this requirement we should go for map() function.
+
+         Eg. For every element present in the list perform double and generate new list of doubles.
+             
+                  map(function,sequence) 
+         The function can be applied on each element of sequence and generates new sequence.
+
+         We can apply map() function on multiple lists also.But make sure all list should have same length.
+               map(lambda x,y:x*y,l1,l2)
+               x is from l1 and y is from l2 
+      
+
+      reduce() Function :
+        
+        reduce() function reduces sequence of elements into a single element by applying the specified function.
+               reduce(function,sequence)
+        reduce() function present in functools module and hence we should write import statement.
+    
+
+
+    Everything is an Object :
+       
+        1. In python every thing is treated as Object.
+        2. Even functions also internally treated as Object only.
+
+    Function Aliasing :
+
+       For the existing function we can give another name,which is nothing but function Aliasing.
+
+      NOTE :
+       In the above example only one function is available but we can call that function by using either wish name or greeting name.
+       If we delete one name still we can acess that function by using alias name.
+
+
+    Nested Functions :
+
+       We can declare a function inside another function,such type of functions are called Nested Functions.
+
+       In the above example inner() function is local to outer() function and hence it is not possible to call directly 
+       from outside of outer() function .
+
+       NOTE :
+         A function can return another function.
+
+
+
+   f1 = outer
+   f1 = outer()
+
+   In the first case for the outer() function we are providing another name f1 
+   (function Aliasing)
+
+   But in the second case we calling outer() function,which returns inner function.For that inner function()
+   we are providing another name f1 .
+
+   NOTE :
+      
+       We can pass function as argument to another function.
+       E.g 
+          filter(function,sequence)
+          map(function,sequence)
+          reduce(function,sequence)
+          
+    
+ 
+         
