@@ -1,0 +1,120 @@
+A group of functions,variables and classes saved to a file which is nothing but module.
+Every Python file (.py) acts as a module.
+
+NOTE :
+  Whenever we are using a module in our program,for that module complied file will be generated and stored in the hard disk parmanetly.
+
+
+Module Aliasing :
+   
+    import prodip_math as pm 
+    Here prodip_math is original module name and m is alias name.
+    We can access members by using alias name m 
+
+
+from ....... import 
+
+   We can import particular members of module by using from .... import.
+   The main advantage of this is we can access members directly without using module name.
+
+   We can import all members of a module as follows from prodip_math import * 
+
+
+Various Possibilities of import :
+    
+    1. import modulename
+    2. import module1,module2,module3
+    3. import module1 as m
+    4. import module1 as m1,import module2 as m2,module3
+    5. from module import member
+    6. from module import member1,member2,member3
+    7. from module import member1 as mem
+    8. from module import * 
+
+
+
+Member Aliasing :
+    
+     Once we defined as alias name,we should use alias name only and we should not use original name.
+                 from prodip_math import x as y
+                 print(y)  -> NameError
+
+
+Reloading a Module :
+   
+      By default module will be loaded only Once eventhough we are importing multiple  times.
+      We can reload by using reload() function of imp module.
+
+
+
+Finding Members of Module by using dir() Function :
+     
+        Python provides inbuilt function dir() to list out all members of current module or a specified module.
+        dir() -> To list out all members of current module.
+        dir(moduleName) -> To list out all members of specified module. 
+
+
+The special variable __name__ :
+      
+      For every Python program,special variable __name__ will be added internally.
+      This variables stores information regarding whether the program is executed as an individual program or as a module.
+      If the program executed as an individual program then the value of this variable is __main__
+      If the program executed as a module from some other program then the value of this variable is the name of module where it is defined.
+      Hence by using this __name__ variable we can identify whether the program executed directly or as a module.
+
+
+Working with math Module :
+    
+    Python provides inbuilt module math.
+    We can find help for any module by using help() function .
+
+              import math
+              help(math)
+
+
+ Working with random Module :
+     
+     This module defines several functions to generate random numbers.
+     We can use these functions while developing games,in cryptography and to generate random numbers on fly for authentication.
+
+            1. random() function
+            2. randint() function
+            3. uniform() function
+            4. randrange() ([start],stop,[step])
+            5. choice() function
+
+
+        random() function :
+            
+            This function always generate some float value between 0 and 1 (not inclusive)
+                         0<x<1
+        
+        randint() function :
+            
+            To generate random integer between two given numbers(inclusive)
+        
+        uniform() function :
+            
+            It returns random float values between 2 given numbers (not inclusive)
+
+            random() -> between 0 and 1 (not inclusive)
+            randint(x,y) -> between x and y ( inclusive)
+            uniform(x,y) -> between x and y ( not inclusive)
+
+
+        randrange() ([start],stop,[step]) :
+             
+               Returns a random number from range 
+               start <= x < stop 
+               start argument is optional and default value is 0
+               step  argument is optional and default value is 1
+
+               randrange(10) -> generates 0 to 9
+               randrange(1,11) -> generates 1 to 10 
+               randrange(1,11,2) -> generates 1,3,5,7,9 
+        
+        choice() function :
+           
+            It won't return random number.
+            It will return a random object from the given list or tuple.
+            
